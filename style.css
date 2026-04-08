@@ -1,0 +1,39 @@
+/* ===== MODO ESCURO MELHORADO (GLASS EFFECT) ===== */
+body.dark .section,
+body.dark .course-card,
+body.dark .specialty,
+body.dark .step {
+    /* Fundo levemente translúcido */
+    background: rgba(255, 255, 255, 0.04); 
+    
+    /* O "vidro" propriamente dito */
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    
+    /* Borda sutil que dá o efeito de "quina" de vidro */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    
+    /* Arredondamento para suavizar o visual */
+    border-radius: var(--radius, 16px);
+    
+    /* Sombra suave para separar do fundo */
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+    
+    transition: all 0.3s ease;
+}
+
+/* Efeito de destaque ao passar o mouse */
+body.dark .section:hover,
+body.dark .course-card:hover,
+body.dark .specialty:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transform: translateY(-4px); /* Leve levantada */
+}
+
+/* Ajuste para o texto dentro desses cards */
+body.dark .course-card h3, 
+body.dark .section h2 {
+    color: rgba(255, 255, 255, 0.95);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
